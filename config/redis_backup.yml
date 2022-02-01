@@ -1,0 +1,12 @@
+aws_profile: "da-np"
+
+region: ap-south-1
+
+elasticache_backup_conf:
+  CacheClusterId: 'staging-redis-db-redis-cluster-001'
+  SnapshotSource: 'system'
+  max_snapshots: 50
+  backup_duration: 7
+  s3bucket: 'staging-redis-db-backup'
+
+

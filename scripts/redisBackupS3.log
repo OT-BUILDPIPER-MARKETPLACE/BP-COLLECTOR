@@ -1,0 +1,21 @@
+{"time": "2022-01-11 22:19:38,429", "level": "INFO", "function name ": "_getProperty", "process": "p76588", "line no": "35", "message": "configuration file path found /home/opstree/Desktop/redisScript/backup_manager/config/redis_backup.yml"}
+{"time": "2022-01-11 22:19:38,443", "level": "INFO", "function name ": "list_snapshots", "process": "p76588", "line no": "67", "message": "session established sucessfully "}
+{"time": "2022-01-11 22:19:38,449", "level": "INFO", "function name ": "load", "process": "p76588", "line no": "1233", "message": "Found credentials in shared credentials file: ~/.aws/credentials"}
+{"time": "2022-01-11 22:25:14,613", "level": "INFO", "function name ": "_getProperty", "process": "p76855", "line no": "35", "message": "configuration file path found /home/opstree/Desktop/redisScript/backup_manager/config/redis_backup.yml"}
+{"time": "2022-01-11 22:25:14,630", "level": "INFO", "function name ": "list_snapshots", "process": "p76855", "line no": "67", "message": "session established sucessfully "}
+{"time": "2022-01-11 22:25:14,636", "level": "INFO", "function name ": "load", "process": "p76855", "line no": "1233", "message": "Found credentials in shared credentials file: ~/.aws/credentials"}
+{"time": "2022-01-11 22:25:24,255", "level": "INFO", "function name ": "_getProperty", "process": "p76894", "line no": "34", "message": "configuration file path found /home/opstree/Desktop/redisScript/backup_manager/config/redis_backup.yml"}
+{"time": "2022-01-11 22:25:24,279", "level": "INFO", "function name ": "list_snapshots", "process": "p76894", "line no": "66", "message": "session established sucessfully "}
+{"time": "2022-01-11 22:25:24,284", "level": "INFO", "function name ": "load", "process": "p76894", "line no": "1233", "message": "Found credentials in shared credentials file: ~/.aws/credentials"}
+{"time": "2022-01-11 22:26:31,877", "level": "INFO", "function name ": "_getProperty", "process": "p77024", "line no": "26", "message": "configuration file path found /home/opstree/Desktop/redisScript/backup_manager/config/redis_backup.yml"}
+{"time": "2022-01-11 22:26:31,893", "level": "INFO", "function name ": "list_snapshots", "process": "p77024", "line no": "58", "message": "session established sucessfully "}
+{"time": "2022-01-11 22:26:31,899", "level": "INFO", "function name ": "load", "process": "p77024", "line no": "1233", "message": "Found credentials in shared credentials file: ~/.aws/credentials"}
+{"time": "2022-01-11 22:27:10,451", "level": "INFO", "function name ": "_getProperty", "process": "p77061", "line no": "26", "message": "configuration file path found /home/opstree/Desktop/redisScript/backup_manager/config/redis_backup.yml"}
+{"time": "2022-01-11 22:27:10,467", "level": "INFO", "function name ": "list_snapshots", "process": "p77061", "line no": "58", "message": "session established sucessfully "}
+{"time": "2022-01-11 22:27:10,474", "level": "INFO", "function name ": "load", "process": "p77061", "line no": "1233", "message": "Found credentials in shared credentials file: ~/.aws/credentials"}
+{"time": "2022-01-11 22:27:48,993", "level": "INFO", "function name ": "_getProperty", "process": "p77137", "line no": "26", "message": "configuration file path found /home/opstree/Desktop/redisScript/backup_manager/config/redis_backup.yml"}
+{"time": "2022-01-11 22:27:49,010", "level": "INFO", "function name ": "list_snapshots", "process": "p77137", "line no": "57", "message": "session established sucessfully "}
+{"time": "2022-01-11 22:27:49,016", "level": "INFO", "function name ": "load", "process": "p77137", "line no": "1233", "message": "Found credentials in shared credentials file: ~/.aws/credentials"}
+{"time": "2022-01-11 22:30:50,244", "level": "INFO", "function name ": "_getProperty", "process": "p77229", "line no": "26", "message": "configuration file path found /home/opstree/Desktop/redisScript/backup_manager/config/redis_backup.yml"}
+{"time": "2022-01-11 22:30:50,258", "level": "INFO", "function name ": "list_snapshots", "process": "p77229", "line no": "57", "message": "session established sucessfully "}
+{"time": "2022-01-11 22:30:50,264", "level": "INFO", "function name ": "load", "process": "p77229", "line no": "1233", "message": "Found credentials in shared credentials file: ~/.aws/credentials"}
