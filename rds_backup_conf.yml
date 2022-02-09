@@ -1,0 +1,11 @@
+tags:
+  "Key": "owner"
+  "Value": "opstree"
+
+arguments:
+    exportTaskIdentifier: ''
+    sourceArn: ''
+    s3BucketName: ''
+    iamRoleArn: ''
+    kmsKeyId: ''
+    exportOnly: ['database']
