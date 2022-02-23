@@ -1,0 +1,19 @@
+aws_profile: default
+region:
+      - us-east-1
+      
+services:
+  rds:
+    arguments:
+      s3BucketName: 'rdsdbstest'
+      iamRoleArn: 'arn:aws:iam::371472094840:role/service-role/s3-bucketaccesss'
+      kmsKeyId: '3a213e62-7513-4306-bae4-c6404d8fd773'
+      
+    tags:
+       "Key": "owner"
+       "Value": "opstree"
+
+
+tags:
+   "Key": "owner"
+   "Value": "opstree"
