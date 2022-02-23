@@ -4,7 +4,7 @@ This utility will fetch automatic/User created backups of the AWS resources by t
 Here configuration file where arugments are given in key=value  :
 - ***profile :*** It is a credentials that you can apply to a AWS CLI command.It is optional argument . 
 - ***aws_region :*** The AWS Region where the this utility  is executed.It is a required argument.
-- ***elasticache_backup_conf :**** This utility will fetch all the elasticcache backup matches to this given Cache_cluster, ***SnapshotSource will filter snapshots user created or the automated backup, ***max_snapshots: will list upto 50 snapshots, ***backup_duration: will filter the snapshots of as last 1 day,***s3bucket: Name of the bucket where we want to push backups.
+- ***elasticache_backup_conf :*** This utility will fetch all the elasticcache backup matches to this given Cache_cluster, ***SnapshotSource will filter snapshots user created or the automated backup***, ***s3bucket: Name of the bucket where we want to push backups***, ***iamRoleArn: Role for push the snapshots on the s3***, ***kmsKeyId: To encrypt the data***.
 
 
 
@@ -21,7 +21,7 @@ To run this utility locally from your system. Follow below steps.
 
 - Run the python script.
 
-``` python3 scripts/script.py```
+``` python3 script.py```
 
 ## Using Docker
 To run this utility using docker.Follow below steps.
