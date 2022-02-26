@@ -29,32 +29,6 @@ LOGGER.addHandler(FILE_HANDLER)
 LOGGER.addHandler(STREAM_HANDLER)
   
 
-# def resize_rds(properties,databases,client):
-
-#     logging.info(f'Start modifying the databases.....')
-#     for db in databases:
-#         try:
-#             response = client.modify_db_instance(
-#                 DBInstanceIdentifier=db,
-#                 AllocatedStorage=properties['services']['rds']['resize_params']['allocatedStorage'],
-#                 DBInstanceClass=properties['services']['rds']['resize_params']['dbInstanceClass'],
-#                 ApplyImmediately=True,
-#             )
-#             logging.info(f'Modification of {db} is done')
-#         except:
-#             logging.info(f'Modification of {db} is failed')
-
-
-# def resize_redis(properties,redis_instance_ids,client):
-
-#     for redis in redis_instance_ids:
-#         response = client.modify_replication_group(
-#         ReplicationGroupId=redis,
-#         ApplyImmediately=True, 
-#         CacheNodeType=properties['services']['redis']['resize_params']['cacheNodeType']
-#         )  
-#         logging.info(f'Modification of {redis} redis done.')
-
 def rds_db_instance(client,properties,rds_tags):
     logging.info(f'Connected with rds resources')
     resource = client.describe_db_instances()
@@ -71,7 +45,6 @@ def rds_db_instance(client,properties,rds_tags):
 
     return databases
 
-# fetch_db_snapshots_with_db(rds_client,properties,rds_tags)
 def fetch_db_snapshots_with_db(client,properties,rds_tags):
     logging.info(f'Connected with rds resources')
     databases = rds_db_instance(client,properties,rds_tags)
@@ -96,7 +69,6 @@ def fetch_db_snapshots_with_db(client,properties,rds_tags):
 
 
 def export_snapshot_s3(client,properties,rds_tags,snapshotsarn):
-    # snapshotsarn = fetch_db_snapshots_with_db(client,properties,rds_tags)
     new = properties['services']['rds']['arguments']
     for snap in snapshotsarn:
         try:
@@ -115,7 +87,6 @@ def export_snapshot_s3(client,properties,rds_tags,snapshotsarn):
 def _awsResourceManagerFactory(properties, aws_profile, args):
 
     instance_ids = []
-
     
     try:
         
@@ -144,14 +115,10 @@ def _awsResourceManagerFactory(properties, aws_profile, args):
 
                     LOGGER.info(f'Found RDS tags details for filtering : {rds_tags}')
 
-                    rds_client = session.client("rds", region_name=properties['region'][0])
+                    rds_client = session.client("rds", region_name=properties['region'])
 
                     LOGGER.info(f'Scanning AWS RDS resources snapshots in {properties["region"]} region based on tags {rds_tags} provided')
 
-                    # aws_resource_finder = aws_resource_tag_factory.getResoruceFinder(rds_client,"rds")
-                    # export_snapshot_s3(rds_client,properties,rds_tags)
-                    # export_snapshot_s3(client,properties,rds_tags)
-                    # databases = aws_resource_finder._get_resources_using_tags(rds_tags)
                     snapshotsarn = fetch_db_snapshots_with_db(rds_client,properties,rds_tags)
 
                     if snapshotsarn:
@@ -160,7 +127,6 @@ def _awsResourceManagerFactory(properties, aws_profile, args):
 
                         if os.environ[SCHEULE_ACTION_ENV_KEY] == "export":
 
-                            # snapshots_rds(properties,snapshots,redis_client)     
                             export_snapshot_s3(rds_client,properties,rds_tags,snapshotsarn)                       
 
                         else:

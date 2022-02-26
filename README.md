@@ -1,4 +1,4 @@
-# Schedule backup Utility
+# Push Snapshots on S3 Utility
 This utility will fetch automatic/User created backups of the AWS resources by the user-defined tags, resources like RDS. And it can be used to schedule push backups to S3 bucket . 
 ## configuration 
 Here configuration file where arugments are given in key=value  :
